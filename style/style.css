@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Reddit+Mono:wght@200..900&display=swap');
+
+:root{
+    --bg-color: #202136;
+    --color-one: #fff;
+    --color-two: #008cff;
+    --color-three: #0757c0;
+    --color-four: #ffffff70;
+    --ainmation-time: 0.17s;
+}
+
+*{
+    box-sizing: border-box;    
+    user-select: none;
+    margin: 0px;
+    font-family: "Reddit Mono", "monospace";
+}
+
+html{
+	scroll-behavior: smooth;
+}
+
+body{
+    background-color: var(--bg-color);
+}
+
+#header{
+    width: 100%;
+    border-bottom: 1px var(--color-four) solid;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    padding: 14px;
+}
+
+.header-title{
+    color: var(--color-one);
+    font-size: 1.4rem;
+    width: 55%;
+    text-align: center;
+}
+
+.socials{
+    color: var(--color-one);
+    font-size: 1.6rem;
+    width: 45%;
+    min-width: 100px;
+}
+
+.fa-github, .fa-x-twitter{
+    padding: 2px;
+    transition: var(--ainmation-time);
+}
+
+.fa-github:hover, .fa-x-twitter:hover{
+    cursor: pointer;
+    color: var(--color-two);
+    scale: 1.2;
+}
+
+.fa-github:active, .fa-x-twitter:active{
+    color: var(--color-three)
+}
+
+.settings{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: var(--color-one);
+    margin: 20px;
+    flex-wrap: wrap;
+}
+
+.settings > *{
+    cursor: pointer;
+}
+
+.jump-to{
+    width: 30%;
+    margin: 20px auto;
+}
+
+.jump-to-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.jump-to-container > img{
+    cursor: pointer;
+}
+
+.traders > *{
+    display: flex;
+    align-items: center;
+    height: 70vh;
+    border-bottom: 1px var(--color-four) solid;
+}
+
+/* >> this is realted to jump to section which is not completed just yet
+.prapor{
+    border-top: 1px var(--color-four) solid;
+} */
+
+.trader-image{
+    scale: 0.9;
+    position: absolute;
+    left: 20px;
+}
+
+.task-box{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    text-align: center;
+    padding: 10px;
+    color: var(--color-one);
+    border: 1px var(--color-one) solid;
+    border-radius: 12px;
+    font-size: 1.3rem;
+    font-weight: 400;
+    width: max-content;
+    min-width: 200px;
+    transition: var(--ainmation-time);
+}
+
+.task-box:hover{
+    background-color: var(--color-two);
+    cursor: pointer;
+    transform: translateY(3px);
+    border: 1px var(--color-two) solid;
+}
+
+.task-box:active{
+    background-color: var(--color-three);
+}
+
+.icons{
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+#icon-one{
+    color: red;
+}
+
+#icon-two{
+    color: lime;
+}
+
+#icon-three{
+    color: yellow;
+}
+
+#footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5vh;
+}
+
+#footer > a{
+    color: var(--color-one);
+    font-size: 2rem;
+}
