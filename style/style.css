@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Reddit+Mono:wght@200..900&display=swap');
 
 :root{
-    --bg-color: #202136;
+    --bg-color: #19191f;
     --color-one: #fff;
     --color-two: #008cff;
     --color-three: #0757c0;
@@ -26,7 +26,7 @@ body{
 
 #header{
     width: 100%;
-    border-bottom: 1px var(--color-four) solid;
+    /* border-bottom: 1px var(--color-four) solid; */
     display: grid;
     grid-template-columns: 1fr 2fr;
     padding: 14px;
@@ -40,10 +40,13 @@ body{
 }
 
 .socials{
-    color: var(--color-one);
     font-size: 1.6rem;
     width: 45%;
     min-width: 100px;
+}
+
+.socials > a{
+    color: var(--color-one)
 }
 
 .fa-github, .fa-x-twitter{
@@ -136,19 +139,22 @@ body{
 
 .icons{
     font-size: 1rem;
-    margin-top: 10px;
+    margin-top: 5px;
 }
 
 #icon-one{
-    color: red;
+    color: lime;
+    opacity: 0;
 }
 
 #icon-two{
-    color: lime;
+    color: red;
+    opacity: 0;
 }
 
 #icon-three{
     color: yellow;
+    opacity: 0;
 }
 
 #footer{
