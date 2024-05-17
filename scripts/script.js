@@ -14,6 +14,12 @@ const taskBoxIconOne = document.getElementById("icon-one");
 const taskBoxIconTwo = document.getElementById("icon-two");
 const taskBoxIconThree = document.getElementById("icon-three");
 
+const praporSlider = document.getElementById("prapor");
+let isPraPorMoving = false;
+let praporStartPos = 0;
+
+
+
 
 function settingTurnOn(button){
     if(button === 0){
@@ -68,19 +74,32 @@ function settingTurnOn(button){
 }
 
 
-function settingTwoTurnOn(){
-    if(settingTwo === true){
-        settingTwoIcon.style.color = "white";
-        settingTwo = false;
-    }
-    else{
-        settingTwoIcon.style.color = "red"
-        settingTwo = true;
+function praporStart(e){
+    isPraPorMoving = true;
+    praporStartPos = e.clientX - praporSlider.offsetLeft;
+}
+
+function praporMove(e){
+    if(isPraPorMoving){
+        let praporEndPos = e.clientX - praporStartPos;
+        if(praporEndPos<0){
+            praporSlider.style.left = praporEndPos + "px";
+            console.log(praporEndPos)
+        }
     }
 }
+
+function praporStop(e){
+    isPraPorMoving = false;
+}
+
 
 settingOneButton.addEventListener("click", () => settingTurnOn(0));
 settingTwoButton.addEventListener("click", () => settingTurnOn(1));
 settingThreeButton.addEventListener("click", () => settingTurnOn(2));
+
+ document.addEventListener("mousedown", praporStart);
+ praporSlider.addEventListener("mousemove", praporMove);
+ document.addEventListener("mouseup", praporStop);
 
 
