@@ -14,9 +14,38 @@ const taskBoxIconOne = document.getElementById("icon-one");
 const taskBoxIconTwo = document.getElementById("icon-two");
 const taskBoxIconThree = document.getElementById("icon-three");
 
+
 const praporSlider = document.getElementById("prapor");
-let isPraPorMoving = false;
+let isPraporMoving = false;
 let praporStartPos = 0;
+
+const therapistSlider = document.getElementById("therapist");
+let isTherapistMoving = false;
+let therapistStartPos = 0;
+
+const fenceSlider = document.getElementById("fence");
+let isFenceMoving = false;
+let fenceStartPos = 0;
+
+const skierSlider = document.getElementById("skier");
+let isSkierMoving = false;
+let skierStartPos = 0;
+
+const pracekeeperSlider = document.getElementById("pracekeeper");
+let isPracekeeperMoving = false;
+let pracekeeperStartPos = 0;
+
+const mechanicSlider = document.getElementById("mechanic");
+let isMechanicMoving = false;
+let mechanicStartPos = 0;
+
+const ragmanSlider = document.getElementById("ragman");
+let isRagmanMoving = false;
+let ragmanStartPos = 0;
+
+const jaegerSlider = document.getElementById("jaeger");
+let isJaegerMoving = false;
+let jaegerStartPos = 0;
 
 
 
@@ -75,12 +104,12 @@ function settingTurnOn(button){
 
 
 function praporStart(e){
-    isPraPorMoving = true;
+    isPraporMoving = true;
     praporStartPos = e.clientX - praporSlider.offsetLeft;
 }
 
 function praporMove(e){
-    if(isPraPorMoving){
+    if(isPraporMoving){
         let praporEndPos = e.clientX - praporStartPos;
         if(praporEndPos<0){
             praporSlider.style.left = praporEndPos + "px";
@@ -90,7 +119,7 @@ function praporMove(e){
 }
 
 function praporStop(e){
-    isPraPorMoving = false;
+    isPraporMoving = false;
 }
 
 
@@ -98,8 +127,8 @@ settingOneButton.addEventListener("click", () => settingTurnOn(0));
 settingTwoButton.addEventListener("click", () => settingTurnOn(1));
 settingThreeButton.addEventListener("click", () => settingTurnOn(2));
 
- document.addEventListener("mousedown", praporStart);
- praporSlider.addEventListener("mousemove", praporMove);
- document.addEventListener("mouseup", praporStop);
+document.addEventListener("mousedown", praporStart);
+praporSlider.addEventListener("mousemove", praporMove);
+document.addEventListener("mouseup", praporStop);
 
 
