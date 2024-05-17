@@ -31,9 +31,9 @@ const skierSlider = document.getElementById("skier");
 let isSkierMoving = false;
 let skierStartPos = 0;
 
-const pracekeeperSlider = document.getElementById("pracekeeper");
-let isPracekeeperMoving = false;
-let pracekeeperStartPos = 0;
+const peacekeeperSlider = document.getElementById("peacekeeper");
+let isPeacekeeperMoving = false;
+let peacekeeperStartPos = 0;
 
 const mechanicSlider = document.getElementById("mechanic");
 let isMechanicMoving = false;
@@ -103,6 +103,11 @@ function settingTurnOn(button){
 }
 
 
+// This is a very stupid way to do this but till now I don't know a btter way to do it, Will be updated hopefully
+
+// =================== Prapor
+
+
 function praporStart(e){
     isPraporMoving = true;
     praporStartPos = e.clientX - praporSlider.offsetLeft;
@@ -113,7 +118,6 @@ function praporMove(e){
         let praporEndPos = e.clientX - praporStartPos;
         if(praporEndPos<0){
             praporSlider.style.left = praporEndPos + "px";
-            console.log(praporEndPos)
         }
     }
 }
@@ -122,13 +126,182 @@ function praporStop(e){
     isPraporMoving = false;
 }
 
+// =================== Therapist
+
+function therapistStart(e){
+    isTherapistMoving = true;
+    therapistStartPos = e.clientX - therapistSlider.offsetLeft;
+}
+
+function therapistMove(e){
+    if(isTherapistMoving){
+        let therapistEndPos = e.clientX - therapistStartPos;
+        if(therapistEndPos<0){
+            therapistSlider.style.left = therapistEndPos + "px";
+        }
+    }
+}
+
+function therapistStop(e){
+    isTherapistMoving = false;
+}
+
+// =================== Fence
+
+function fenceStart(e){
+    isFenceMoving = true;
+    fenceStartPos = e.clientX - fenceSlider.offsetLeft;
+}
+
+function fenceMove(e){
+    if(isFenceMoving){
+        let fenceEndPos = e.clientX - fenceStartPos;
+        if(fenceEndPos<0){
+            fenceSlider.style.left = fenceEndPos + "px";
+        }
+    }
+}
+
+function fenceStop(e){
+    isFenceMoving = false;
+}
+
+// =================== Skier
+
+function skierStart(e){
+    isSkierMoving = true;
+    skierStartPos = e.clientX - skierSlider.offsetLeft;
+}
+
+function skierMove(e){
+    if(isSkierMoving){
+        let skierEndPos = e.clientX - skierStartPos;
+        if(skierEndPos<0){
+            skierSlider.style.left = skierEndPos + "px";
+        }
+    }
+}
+
+function skierStop(e){
+    isSkierMoving = false;
+}
+
+// =================== Peacekeeper
+
+function peacekeeperStart(e){
+    isPeacekeeperMoving = true;
+    peacekeeperStartPos = e.clientX - peacekeeperSlider.offsetLeft;
+}
+
+function peacekeeperMove(e){
+    if(isPeacekeeperMoving){
+        let peacekeeperEndPos = e.clientX - peacekeeperStartPos;
+        if(peacekeeperEndPos<0){
+            peacekeeperSlider.style.left = peacekeeperEndPos + "px";
+        }
+    }
+}
+
+function peacekeeperStop(e){
+    isPeacekeeperMoving = false;
+}
+
+// =================== Mechanic
+
+function mechanicStart(e){
+    isMechanicMoving = true;
+    mechanicStartPos = e.clientX - mechanicSlider.offsetLeft;
+}
+
+function mechanicMove(e){
+    if(isMechanicMoving){
+        let mechanicEndPos = e.clientX - mechanicStartPos;
+        if(mechanicEndPos<0){
+            mechanicSlider.style.left = mechanicEndPos + "px";
+        }
+    }
+}
+
+function mechanicStop(e){
+    isMechanicMoving = false;
+}
+
+// =================== Ragman
+
+function ragmanStart(e){
+    isRagmanMoving = true;
+    ragmanStartPos = e.clientX - ragmanSlider.offsetLeft;
+}
+
+function ragmanMove(e){
+    if(isRagmanMoving){
+        let ragmanEndPos = e.clientX - ragmanStartPos;
+        if(ragmanEndPos<0){
+            ragmanSlider.style.left = ragmanEndPos + "px";
+        }
+    }
+}
+
+function ragmanStop(e){
+    isRagmanMoving = false;
+}
+
+// =================== jeager
+
+function jaegerStart(e){
+    isJaegerMoving = true;
+    jaegerStartPos = e.clientX - jaegerSlider.offsetLeft;
+}
+
+function jaegerMove(e){
+    if(isJaegerMoving){
+        let jaegerEndPos = e.clientX - jaegerStartPos;
+        if(jaegerEndPos<0){
+            jaegerSlider.style.left = jaegerEndPos + "px";
+        }
+    }
+}
+
+function jaegerStop(e){
+    isJaegerMoving = false;
+}
+
+// ===================
+
 
 settingOneButton.addEventListener("click", () => settingTurnOn(0));
 settingTwoButton.addEventListener("click", () => settingTurnOn(1));
 settingThreeButton.addEventListener("click", () => settingTurnOn(2));
 
+
 document.addEventListener("mousedown", praporStart);
 praporSlider.addEventListener("mousemove", praporMove);
 document.addEventListener("mouseup", praporStop);
 
+document.addEventListener("mousedown", therapistStart);
+therapistSlider.addEventListener("mousemove", therapistMove);
+document.addEventListener("mouseup", therapistStop);
 
+document.addEventListener("mousedown", fenceStart);
+fenceSlider.addEventListener("mousemove", fenceMove);
+document.addEventListener("mouseup", fenceStop);
+
+document.addEventListener("mousedown", skierStart);
+skierSlider.addEventListener("mousemove", skierMove);
+document.addEventListener("mouseup", skierStop);
+
+document.addEventListener("mousedown", peacekeeperStart);
+peacekeeperSlider.addEventListener("mousemove", peacekeeperMove);
+document.addEventListener("mouseup", peacekeeperStop);
+
+document.addEventListener("mousedown", mechanicStart);
+mechanicSlider.addEventListener("mousemove", mechanicMove);
+document.addEventListener("mouseup", mechanicStop);
+
+document.addEventListener("mousedown", ragmanStart);
+ragmanSlider.addEventListener("mousemove", ragmanMove);
+document.addEventListener("mouseup", ragmanStop);
+
+document.addEventListener("mousedown", jaegerStart);
+jaegerSlider.addEventListener("mousemove", jaegerMove);
+document.addEventListener("mouseup", jaegerStop);

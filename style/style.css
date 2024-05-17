@@ -112,12 +112,12 @@ body{
     left: 20px;
 }
 
-.prapor, .therapist, .fence, .skier, .pracekeeper, .mechanic, .ragman, .jaeger{
+.prapor, .therapist, .fence, .skier, .peacekeeper, .mechanic, .ragman, .jaeger{
     position: relative;
     width: 200%;
 }
 
-.prapor-container, .therapist-container, .fence-container, .skier-container, .pracekeeper-container, .mechanic-container, .ragman-container, .jaeger-container{
+.prapor-container, .therapist-container, .fence-container, .skier-container, .peacekeeper-container, .mechanic-container, .ragman-container, .jaeger-container{
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -127,7 +127,7 @@ body{
     cursor: grab;
 }
 
-.prapor-task, .therapist-task, .fence-task, .skier-task, .pracekeeper-task, .mechanic-task, .ragman-task, .jaeger-task{
+.prapor-task, .therapist-task, .fence-task, .skier-task, .peacekeeper-task, .mechanic-task, .ragman-task, .jaeger-task{
     width: 95%;
     height: 100%;
 }
