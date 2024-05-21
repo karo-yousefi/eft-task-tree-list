@@ -49,6 +49,15 @@ let jaegerStartPos = 0;
 
 
 
+fetch("/git/eft-task-tree-list/assets/taskList.json")
+    .then(response => response.json())
+    .then(data => {
+        // Work with the JSON data here
+        console.log(data);
+    })
+    .catch(error => console.error('Error fetching JSON:', error));
+
+
 
 function settingTurnOn(button){
     if(button === 0){

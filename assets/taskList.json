@@ -1,0 +1,91 @@
+
+{
+    "trader": "prapor",
+    "task" : {
+        "number": 1,
+        "name": "Shooting Cans",
+        "rewards": "100xp",
+        "1": [
+            {
+                "number": 2,
+                "name": "Search Misssion",
+                "rewards": "100xp",
+                "2": []
+            },
+            {
+                "number": 3,
+                "name": "Debut",
+                "rewards": "100xp",
+                "3": [
+                    {
+                        "number": 4,
+                        "name": "Luxurious Life",
+                        "rewards": "100xp",
+                        "4": [
+                            {
+                                "number": 5,
+                                "name": "Background Check",
+                                "rewards": "100xp",
+                                "5": [
+                                    {
+                                        "number": 6,
+                                        "name": "Shooting Picnic",
+                                        "rewards": "100xp",
+                                        "6": []
+                                    },
+                                    {
+                                        "number": 7,
+                                        "name": "Delivery From The Past",
+                                        "rewards": "100xp",
+                                        "7": [
+                                            {
+                                                "number": 8,
+                                                "name": "BP Deport",
+                                                "rewards": "100xp",
+                                                "8": [
+                                                    {
+                                                        "number": 9,
+                                                        "name": "The Bunkder-Part 1",
+                                                        "rewards": "100xp",
+                                                        "9": [
+                                                            {
+                                                                "number": 10,
+                                                                "name": "The Bunkder-Part 2",
+                                                                "rewards": "100xp",
+                                                                "10": [
+                                                                    {
+                                                                        "number": 11,
+                                                                        "name": "No place for renegades",
+                                                                        "rewards": "100xp",
+                                                                        "11": [
+                                                                            {
+                                                                                "number": 12,
+                                                                                "name": "Documents",
+                                                                                "rewards": "100xp",
+                                                                                "12": []
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "number": 13,
+                                                        "name": "Bad Rep Evidence",
+                                                        "rewards": "100xp",
+                                                        "13": []
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}
